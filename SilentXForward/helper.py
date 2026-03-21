@@ -7,11 +7,11 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-START_TEXT = """<b>👋 Hello! I am SilentXForward Bot.</b>
+START_TEXT = """<b>👋 Hello! I am Forward Bot.</b>
 
 I Can Forward Videos And Documents From Multiple Channels To Multiple Other Channels, Filtering Out Unwanted Content.
 
-<b>Maintained By:</b> <a href="https://t.me/SilentXBotz">SilentXBotz</a>
+<b>Maintained By:</b> <a href="https://t.me/abhi_the_machinegun">Abhishek</a>
 """
 
 HELP_TEXT = """<b>ℹ️ Help Menu</b>
@@ -22,7 +22,8 @@ I Am An Auto-Forward Bot. I Forward Files From Source Channels To Target Channel
 /start - Check If I Am Alive.
 /help - Show This Help Message.
 /about - Show Information About Me.
-/set &lt;source_id&gt; &lt;target_id&gt; - Add Target To Source
+/set &lt;source_id&gt; &lt;target_id&gt; - Add Target 
+To Source
 /remove_target &lt;source_id&gt; &lt;target_id&gt; - Remove A Target From Source
 /remove_source &lt;source_id&gt; - Remove Source
 /list - View All Set Channels 
@@ -33,15 +34,15 @@ I Am An Auto-Forward Bot. I Forward Files From Source Channels To Target Channel
 2. Use /set command to link source to target channels.
 3. I Will Automatically Forward Videos And Documents!
 
-<b>Channel:</b> @SilentXBotz
+<b>Channel:</b> @atozmoviesflix
 """
 
-ABOUT_TEXT = """<b>🤖 About SilentXForward</b>
+ABOUT_TEXT = """<b>🤖 About ..</b>
 
-<b>Name:</b> SilentXForward
+<b>Name:</b> Abhishek
 <b>Version:</b> 2.0
-<b>Channel:</b> <a href="https://t.me/SilentXBotz">SilentXBotz</a>
-<b>Repository:</b> <a href="https://github.com/NBBotz/Auto-Forward-Bot">GitHub</a>
+<b>Channel:</b> <a href="https://t.me/atozmoviesflix">atozmoviesflix</a>
+<b>Repository:</b> <a href="https://t.me/atozmoviesflix">GitHub</a>
 
 <b>Features:</b>
 - Multi-Source to Multi-Target
@@ -54,8 +55,8 @@ ABOUT_TEXT = """<b>🤖 About SilentXForward</b>
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("📢 Channel", url="https://t.me/SilentXBotz"),
-            InlineKeyboardButton("🐱 GitHub", url="https://github.com/NBBotz/Auto-Forward-Bot")
+            InlineKeyboardButton("📢 Channel", url="https://t.me/atozmoviesflix"),
+            InlineKeyboardButton("🐱 GitHub", url="https://t.me/atozmoviesflix")
         ]
     ]
 )
