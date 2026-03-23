@@ -19,9 +19,9 @@ HELP_TEXT = """<b>ℹ️ Help Menu</b>
 I Am An Auto-Forward Bot. I Forward Files From Source Channels To Target Channels.
 
 <b>Commands:</b>
-/start - Check If I Am Alive.
-/help - Show This Help Message.
-/about - Show Information About Me.
+/startu - Check If I Am Alive.
+/helpu - Show This Help Message.
+/aboutu - Show Information About Me.
 /set &lt;source_id&gt; &lt;target_id&gt; - Add Target 
 To Source
 /remove_target &lt;source_id&gt; &lt;target_id&gt; - Remove A Target From Source
