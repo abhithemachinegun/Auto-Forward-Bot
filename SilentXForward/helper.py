@@ -61,7 +61,7 @@ BUTTONS = InlineKeyboardMarkup(
     ]
 )
 
-@Client.on_message(filters.command("start") & filters.private)
+@Client.on_message(filters.command("startu") & filters.private)
 async def start_command(client, message):
     try:
         await message.reply(
@@ -73,7 +73,7 @@ async def start_command(client, message):
     except Exception as e:
         logger.error(f"Error In Start Function: {e}")
 
-@Client.on_message(filters.command("help") & filters.private)
+@Client.on_message(filters.command("helpu") & filters.private)
 async def help_command(client, message):
     try:
         await message.reply(
@@ -85,7 +85,7 @@ async def help_command(client, message):
     except Exception as e:
         logger.error(f"Error In Help Function: {e}")
 
-@Client.on_message(filters.command("about") & filters.private)
+@Client.on_message(filters.command("aboutu") & filters.private)
 async def about_command(client, message):
     try:
         await message.reply(
