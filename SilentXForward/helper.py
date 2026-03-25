@@ -19,9 +19,9 @@ HELP_TEXT = """<b>ℹ️ Help Menu</b>
 I Am An Auto-Forward Bot. I Forward Files From Source Channels To Target Channels.
 
 <b>Commands:</b>
-/start - Check If I Am Alive.
-/help - Show This Help Message.
-/about - Show Information About Me.
+/strt - Check If I Am Alive.
+/hlp - Show This Help Message.
+/abt - Show Information About Me.
 /set &lt;source_id&gt; &lt;target_id&gt; - Add Target To Source
 /remove_target &lt;source_id&gt; &lt;target_id&gt; - Remove A Target From Source
 /remove_source &lt;source_id&gt; - Remove Source
@@ -60,7 +60,7 @@ BUTTONS = InlineKeyboardMarkup(
     ]
 )
 
-@Client.on_message(filters.command("start") & filters.private)
+@Client.on_message(filters.command("strt") & filters.private)
 async def start_command(client, message):
     try:
         await message.reply(
@@ -72,7 +72,7 @@ async def start_command(client, message):
     except Exception as e:
         logger.error(f"Error In Start Function: {e}")
 
-@Client.on_message(filters.command("help") & filters.private)
+@Client.on_message(filters.command("hlp") & filters.private)
 async def help_command(client, message):
     try:
         await message.reply(
@@ -84,7 +84,7 @@ async def help_command(client, message):
     except Exception as e:
         logger.error(f"Error In Help Function: {e}")
 
-@Client.on_message(filters.command("about") & filters.private)
+@Client.on_message(filters.command("abt") & filters.private)
 async def about_command(client, message):
     try:
         await message.reply(
