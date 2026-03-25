@@ -11,7 +11,7 @@ WEB_SERVER = os.environ.get("WEB_SERVER", "True").lower() in ("true", "1", "t")
 PORT = int(os.environ.get("PORT", "8080"))
 PING_INTERVAL = int(os.environ.get("PING_INTERVAL", "300"))
 
-TG_WORKERS = int(os.environ.get("TG_WORKERS", "1"))
+TG_WORKERS = int(os.environ.get("TG_WORKERS", "4"))
 
 # Your Koyeb/Heroku App Url
 # Example : https://yorappurl.koyeb.app/
