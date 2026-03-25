@@ -7,11 +7,11 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-START_TEXT = """<b>👋 Hello! I am Forward Bot.</b>
+START_TEXT = """<b>👋 Hello! I am SilentXForward Bot.</b>
 
 I Can Forward Videos And Documents From Multiple Channels To Multiple Other Channels, Filtering Out Unwanted Content.
 
-<b>Maintained By:</b> <a href="https://t.me/abhi_the_machinegun">Abhishek</a>
+<b>Maintained By:</b> <a href="https://t.me/SilentXBotz">SilentXBotz</a>
 """
 
 HELP_TEXT = """<b>ℹ️ Help Menu</b>
@@ -19,11 +19,10 @@ HELP_TEXT = """<b>ℹ️ Help Menu</b>
 I Am An Auto-Forward Bot. I Forward Files From Source Channels To Target Channels.
 
 <b>Commands:</b>
-/startu - Check If I Am Alive.
-/helpu - Show This Help Message.
-/aboutu - Show Information About Me.
-/set &lt;source_id&gt; &lt;target_id&gt; - Add Target 
-To Source
+/start - Check If I Am Alive.
+/help - Show This Help Message.
+/about - Show Information About Me.
+/set &lt;source_id&gt; &lt;target_id&gt; - Add Target To Source
 /remove_target &lt;source_id&gt; &lt;target_id&gt; - Remove A Target From Source
 /remove_source &lt;source_id&gt; - Remove Source
 /list - View All Set Channels 
@@ -34,15 +33,15 @@ To Source
 2. Use /set command to link source to target channels.
 3. I Will Automatically Forward Videos And Documents!
 
-<b>Channel:</b> @atozmoviesflix
+<b>Channel:</b> @SilentXBotz
 """
 
-ABOUT_TEXT = """<b>🤖 About ..</b>
+ABOUT_TEXT = """<b>🤖 About SilentXForward</b>
 
-<b>Name:</b> Abhishek
+<b>Name:</b> SilentXForward
 <b>Version:</b> 2.0
-<b>Channel:</b> <a href="https://t.me/atozmoviesflix">atozmoviesflix</a>
-<b>Repository:</b> <a href="https://t.me/atozmoviesflix">GitHub</a>
+<b>Channel:</b> <a href="https://t.me/SilentXBotz">SilentXBotz</a>
+<b>Repository:</b> <a href="https://github.com/NBBotz/Auto-Forward-Bot">GitHub</a>
 
 <b>Features:</b>
 - Multi-Source to Multi-Target
@@ -55,13 +54,13 @@ ABOUT_TEXT = """<b>🤖 About ..</b>
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("📢 Channel", url="https://t.me/atozmoviesflix"),
-            InlineKeyboardButton("🐱 GitHub", url="https://t.me/atozmoviesflix")
+            InlineKeyboardButton("📢 Channel", url="https://t.me/SilentXBotz"),
+            InlineKeyboardButton("🐱 GitHub", url="https://github.com/NBBotz/Auto-Forward-Bot")
         ]
     ]
 )
 
-@Client.on_message(filters.command("startu") & filters.private)
+@Client.on_message(filters.command("start") & filters.private)
 async def start_command(client, message):
     try:
         await message.reply(
@@ -73,7 +72,7 @@ async def start_command(client, message):
     except Exception as e:
         logger.error(f"Error In Start Function: {e}")
 
-@Client.on_message(filters.command("helpu") & filters.private)
+@Client.on_message(filters.command("help") & filters.private)
 async def help_command(client, message):
     try:
         await message.reply(
@@ -85,7 +84,7 @@ async def help_command(client, message):
     except Exception as e:
         logger.error(f"Error In Help Function: {e}")
 
-@Client.on_message(filters.command("aboutu") & filters.private)
+@Client.on_message(filters.command("about") & filters.private)
 async def about_command(client, message):
     try:
         await message.reply(
